@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  bot:
+    container_name:
+      bot
+    restart: unless-stopped
+    build: .
+    env_file:
+     - ./.env
+     - ./.env.database
+    depends_on:
+      - database
+  database:
+    image: postgres:latest
+    env_file:
+      ./.env.database
+    ports:
+      - "5537:5432"
+    restart:
+        unless-stopped
