@@ -1,10 +1,10 @@
-## Architectural decisions.
+## Architectural decisions
 
 This project consists of two services `bot` and `database`.
 
 Service `bot` is developed based on aiogram rpc.
 
-### Bot Commands and Actions.
+### Bot Commands and Actions
 
 #### /start
 
@@ -20,7 +20,7 @@ Hi! I'm avare in video statistics. Write me and I'll help you.
 Next you can write your requests to the bot what data you would like to receive in 
 natural language.
 
-#### User inputs.
+#### User inputs
 
 ```Write your desirable request```
 
@@ -30,7 +30,7 @@ Bot's output:
 **Scalar value**
 ```
 
-### How bot works.
+### How bot works
 
 Bot processes your request throught using `MistralAi` LLM rpc[https://docs.mistral.ai/api/endpoint/chat#operation-chat_completion_v1_chat_completions_post]. 
 The used model is `codestral-latest`. The appropriate handler takes user request and send it to the 
@@ -41,7 +41,7 @@ to the user in the bot chat.
 #### Prompt to the MistralAi looks as:
 
 ```
-сгенерируйте Sql запрос: {user request from telegram bot}.
+сгенерируйте Sql запрос: {user request typed in telegram bot chat}.
     
 Описания моделей следующие:
 
@@ -77,7 +77,7 @@ class SnapShot:
 ------------------
 ------------------
 
-## How to run bot.
+## How to run bot
 
 See the `Commands` section below. Before using the bot, you need to load the json data via `Load json data` 
 command. Loading this json [videos.json] will take about 30 minutes. However, you should have the running 

@@ -5,7 +5,6 @@ from pydantic import AliasChoices, AliasPath, BaseModel, Field, model_serializer
 from common_types import datetime, UTC
 
 
-
 class Object(BaseModel):
     id: str
     created_at: datetime
