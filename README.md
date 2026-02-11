@@ -79,9 +79,9 @@ class SnapShot:
 
 ## How to run bot.
 
-See the `Commands` section below. First, you need to load the json data via `Load json data` command.
-After loading this json [videos.json] have been loaded (this will take about 30 minutes) you should
-run the application deployed in docker containers. Depending on whether the application was built or not,
+See the `Commands` section below. Before using the bot, you need to load the json data via `Load json data` 
+command. Loading this json [videos.json] will take about 30 minutes. However, you should have the running 
+application deployed in docker containers. So, depending on whether the application was built or not,
 you should run the appropriate command either `Build and run` or `Run only`.
 
 ## Customize settings:
